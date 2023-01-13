@@ -39,7 +39,6 @@ router.get("/", verify, async (req, res) => {
   const typeQuery = req.query.type;
   const genreQuery = req.query.genre;
   let list = [];
-
   try {
     if (typeQuery) {
       if (genreQuery) {
@@ -61,5 +60,4 @@ router.get("/", verify, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 module.exports = router;
